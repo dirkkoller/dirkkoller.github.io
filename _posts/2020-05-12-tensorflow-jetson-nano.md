@@ -3,7 +3,7 @@ layout: post
 title:  "TensorFlow auf dem Jetson Nano"
 date:   2020-05-12 09:53:28 +0200
 categories: jetson-nano KI
-permalink: /tensorflow-jetson-nano/
+permalink: /tensorflow-jetson-nano
 ---
 
 Auf Nvidias Jetson-Plattform lassen sich die bekannten Machine Learning-Frameworks wie TensorFlow, PyTorch, Caffee/Caffee2, MXNet und Keras in Form der nativen Vollversionen installieren. In diesem Beitrag wird die Installation des wohl bekanntesten Frameworks, [TensorFlow](https://www.tensorflow.org/) von Google, auf dem Jetson Nano gezeigt.
