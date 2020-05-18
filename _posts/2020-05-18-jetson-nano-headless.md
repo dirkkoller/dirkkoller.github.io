@@ -20,6 +20,6 @@ Unter Windows funktioniert das ähnlich, die USB-Verbindung wird als COM-Port an
 
 Bei erfolgreicher Verbindung fragt der Installationsassistent *oem-config* dann über diesen Weg die erforderlichen Daten (Sprache, Location, Keyboard, Zeitzone, Username und -passwort, Partitionsgröße, Netzwerk, Hostname) ab. Ist das geschehen, kann man sich über ssh oder putty mit dem Nano verbinden:
 
-ssh dirk@jetson-nano
+    ssh dirk@jetson-nano
 
 Der Vorgang ist ausführlicher im [NVIDIA Jetson Linux Developer Guide](https://docs.nvidia.com/jetson/l4t/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fflashing.html%23wwpID0E0KD0HA) beschrieben.
