@@ -29,6 +29,7 @@ twitter_username: dirkkoller
 github_username:
 
 lang: de
+google_analytics: UA-1269449-1
 
 # Build settings
 theme: minima
