@@ -27,9 +27,11 @@ Installieren von virtualenv (damit lassen sich isolierte Python-Umgebungen anleg
     sudo apt-get install virtualenv
 
 Anlegen einer Umgebung:
+
     python3 -m virtualnv -p python3 tf
 
 Aktivieren der virtuellen Umgebung:
+
     source tf/bin/activate
 
 
