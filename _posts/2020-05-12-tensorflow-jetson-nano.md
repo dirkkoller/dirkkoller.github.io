@@ -12,7 +12,7 @@ Die Installation ist in dem PDF-Dokument [Installing  TensorFlow For Jetson Plat
 
 Davon ausgehend, dass die aktuelle Jetpack-Version (derzeit 4.4) installiert ist, sind die folgenden Schritte durchzuführen:
 
-Installieren der erforderlichen Bibliotheken:
+Installieren der für TensorFlow erforderlichen System-Bibliotheken:
 
     sudo apt-get update
     sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
@@ -21,6 +21,17 @@ Installieren und Updaten des Paketmanagers pip3:
 
     sudo apt-get install python3-pip
     sudo pip3 install -U pip testresources setuptools
+
+Installieren von virtualenv (damit lassen sich isolierte Python-Umgebungen anlegen und somit zum Beispiel verschiedene Versionen von TensorFlow testen):
+
+    sudo apt-get install virtualenv
+
+Anlegen einer Umgebung:
+    python3 -m virtualnv -p python3 tf
+
+Aktivieren der virtuellen Umgebung:
+    source tf/bin/activate
+
 
 Installieren diverser Python-Abhängigkeiten:
 
