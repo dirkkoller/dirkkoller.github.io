@@ -22,24 +22,24 @@ Installieren und Updaten des Paketmanagers pip3:
     sudo apt-get install python3-pip
     sudo pip3 install -U pip testresources setuptools
 
-Installieren von virtualenv (damit lassen sich isolierte Python-Umgebungen anlegen und somit zum Beispiel verschiedene Versionen von TensorFlow testen):
+[Optional] Installieren von virtualenv (damit lassen sich isolierte Python-Umgebungen anlegen und somit zum Beispiel verschiedene Versionen von TensorFlow testen):
 
     sudo apt-get install virtualenv
 
-Anlegen einer Umgebung namens *tf*:
+[Optional] Anlegen einer virtuellen Umgebung namens *tf*:
 
     python3 -m virtualenv -p python3 tf
 
-Aktivieren der virtuellen Umgebung:
+[Optional] Aktivieren der virtuellen Umgebung:
 
     source tf/bin/activate
 
 
-Installieren diverser Python-Abhängigkeiten in die virtuelle Umgebung:
+Installieren diverser Python-Abhängigkeiten:
 
     sudo pip3 install -U numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11
 
-Installieren der aktuellen TensorFlow-Version in die virtuelle Umgebung:
+Installieren der aktuellen TensorFlow-Version:
 
     sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
 
