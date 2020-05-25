@@ -27,7 +27,7 @@ Der Server ist vom Browser aus unter dem Defaultport 8888 zu erreichen:
     http://127.0.0.1:8888
 
 
-Will man den Jupyter-Server von einem anderen Rechner aus nutzen, ist das über einen SSH-Tunnel möglich. Das folgende Kommando öffnet beispielweise den Tunnel von einem Remote-Rechner zum Rechner *raspberrypi*, auf dem der Server läuft.
+Will man den Jupyter-Server von einem anderen Rechner aus nutzen, ist das über einen SSH-Tunnel möglich. Das folgende Kommando öffnet beispielsweise den Tunnel von einem Remote-Rechner zum Rechner *raspberrypi*, auf dem der Server läuft.
 
     ssh -L 8000:localhost:8888 pi@raspberrypi
 
