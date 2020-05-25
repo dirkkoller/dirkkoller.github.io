@@ -27,7 +27,15 @@ Der Server ist vom Browser aus unter dem Defaultport 8888 zu erreichen:
     http://127.0.0.1:8888
 
 
-Auf der Hauptseite wird zunächst das serverseitige Dateisystem angezeigt:
+Will man den Jupyter-Server von einem anderen Rechner aus nutzen, ist das über einen SSH-Tunnel möglich. Das folgende Kommando öffnet beispielweise den Tunnel von einem Remote-Rechner zum Rechner *raspberrypi*, auf dem der Server läuft.
+
+    ssh -L 8000:localhost:8888 pi@raspberrypi
+
+Nach dem Login startet man Juypter wie oben geschildert auf dem Server und kann dann auf dem Remote-Rechner unter der URL localhost:8000 auf das Notebook zugreifen. Beim ersten Zugriff wird ein Token benötigt, das man in der Serverausgabe findet:
+
+![image](images/python-jupyter-notebook/jupyter-token.jpg)
+
+Klappt der Zugriff, egal ob lokal oder remote, wird zunächst das serverseitige Dateisystem angezeigt:
 
 ![image](images/python-jupyter-notebook/jupyter-tree.jpg)
 
