@@ -11,7 +11,7 @@ Es gibt eine ganze Reihe ausgezeichneter IDEs für Python. Zum Publizieren, Teil
 Notebook ist eine web-basierte Anwendung. Die Oberfläche wird also im Browser bedient. Im Hintergrund, womöglich in der Cloud, läuft ein Server, der die Webseiten ausliefert und den Python-Code ausführt. Abgelegt werden die Daten in einem offenen Format, das auf JSON basiert.
 
 ## Installation von Jupyter Notebook
-Die Installation erfolgt am einfachsten mit Anaconda. Hier lässt sich Notebook einfach über den Navigator per Knopfdruck starten.
+Die Installation erfolgt am einfachsten mit [Anaconda](/python-anaconda). Hier lässt sich Notebook einfach über den Navigator per Knopfdruck starten.
 
 Wer Anaconda nicht nutzt, kann *pip* bemühen:
 
@@ -46,3 +46,5 @@ Im Beispiel wurde zunächst ein Text und dann eine Zeile Code eingegeben:
 Das Ausführen des Programms erfolgt erwartungsgemäß mit *Run*. Die grade ausgewählte Zelle, erkennbar am grünen Rahmen, wird dabei in einem sogenanntem *Kernel* ausgeführt. Ein Kernel ist ein programmiersprachenabhängiger Interpreter, der die Anfragen bearbeitet, Code ausführt und die Antworten zurückliefert. Der mitgelieferte Standardkernel für Python ist *iPython*. Weitere Kernel lassen sich bei Bedarf installieren. Jupyter unterstützt durch diese Technik 40 verschiedene Programmiersprachen. Die weiteste Verbreitung hat Jupyter Notebook aber nach wie vor im Umfeld der Sprachen **Ju**lia, **Py**thon und **R**, die auch Namensgeber für das Projekt sind.
 
 ![image](images/python-jupyter-notebook/jupyter-run.jpg)
+
+Wer möchte kann genau [dieses Notebook ausprobieren](https://mybinder.org/v2/gh/dirkkoller/dirkkoller.github.io/master?filepath=test.ipynb) und bekommt so eine Idee wie das Teilen von Notebooks, hier mittels [binder](https://mybinder.org/), funktioniert (dauert ein paar Sekunden bis es interaktiv ist).
