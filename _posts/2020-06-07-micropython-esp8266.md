@@ -5,7 +5,7 @@ categories: MicroPython ESP8266
 permalink: /micropython-esp8266
 ---
 
- Bisher war die Arduino-Plattform mit C/C++ als Sprache das Mittel der Wahl, um Sensoren auszulesen oder Servos anzusteuern. Inzwischen wird Arduino aber gleich von zwei Seiten attackiert. Die 32Bit-Mikrokontroller ESP8266 bzw. ESP32 von [Espressif](https://www.espressif.com/) werden immer beliebter und machen der Arduino-Hardware Konkurrenz.
+ Bisher war die Arduino-Plattform mit C/C++ als Sprache das Mittel der Wahl, um Sensoren auszulesen oder Servos anzusteuern. Inzwischen wird Arduino aber gleich von zwei Seiten attackiert. Die 32Bit-Mikrokontroller ESP8266 bzw. ESP32 von [Espressif](https://www.espressif.com/) werden immer beliebter und machen der etablierten Arduino-Hardware Konkurrenz.
 
 ## MicroPython
  Auf ihnen, aber auch auf anderen Mikrokontrollern wie dem Pyboard oder der STM32-Familie, lässt sich ein Python-Derivat namens [**MicroPython**](http://micropython.org/) betreiben, das die Arduino-Plattform softwareseitig herausfordert. MicroPython ist eine Python 3-Implementierung mit einem abgespeckten Umfang der Standardbibliotheken. Weiterhin  enthalten sind im ehemaligen Kickstarter-Projekt des Australiers Damien George der Compiler, eine Laufzeitumgebung und ein interaktiver Modus zur Befehlseingabe.
@@ -18,16 +18,16 @@ Um MicroPython auf einem der genannten Prozessoren laufen zu lassen, muss die Fi
 
 ## Verkabelung FTDI-Adapter und ESP-01
 
-Hier soll einer der günstigsten ESP8266-Chips, der ESP-01 für einen Test genutzt werden. Er ist für etwa drei Euro erhältlich. Anders als seine teureren "großen Brüder" hat das Modul keinen Mikro-USB-Anschluss. Für den Flashvorgang wird also entweder ein Arduino, oder, wie im Folgenden gezeigt, ein USB zu TTL Adapter mit FTDI-Chip benötigt. Der ESP-01 verträgt nur 3,3 Volt, der FTDI-Adapter ist gegebenenfalls auf diesen Wert einzustellen.
+Hier soll eines der günstigsten ESP8266-Boards, das ESP-01 für einen Test genutzt werden. Es ist für zwei bis drei Euro erhältlich. Anders als seine teureren "großen Brüder" hat das Modul nur vier GPIOs, lediglich 1MB Flash Memory (im Fall des schwarzen Boards, sonst sogar nur 512KB) und keinen Mikro-USB-Anschluss. Für den Flashvorgang wird entweder ein Arduino, oder, wie im Folgenden gezeigt, ein USB zu TTL Adapter mit FTDI-Chip benötigt. Das ESP-01-Board verträgt nur 3,3 Volt, der FTDI-Adapter ist gegebenenfalls auf diesen Wert einzustellen.
 
-Das Pinout des ESP-01 sieht folgendermaßen aus (Blick von oben auf die Bauteile, schlangenförmige WLAN-Antenne rechts):
+Das Pinout des Boards sieht folgendermaßen aus (Blick von oben auf die Bauteile, schlangenförmige WLAN-Antenne rechts):
 
-    Tx    GND
-    CH_PD GPIO2
-    RST   GPIO0
-    VCC   Rx
+    Tx(GPIO1)   GND
+    CH_PD       GPIO2
+    RST         GPIO0
+    VCC         Rx(GPIO3)
 
-Adapter und das ESP-01-Modul werden wie folgt verkabelt:
+Adapter und das ESP-01-Moduls werden wie folgt verkabelt:
 
 Adapter  |  ESP01
 --|--
@@ -54,7 +54,7 @@ Wenn der Adapter als Gerät gefunden wurde, kann mit dem Flashen begonnen werden
 
     esptool.py --port /dev/tty.usbserial-AL0659OL  write_flash --flash_mode qio 0x00000 esp8266-20191220-v1.12.bin
 
-Der Flashmode hängt vom verwendeten Board ab, für das verwendete ESP-01-Modul ist das *qio*.
+Der Flashmode hängt vom verwendeten Board ab, für das verwendete ESP-01-Modul ist das *qio*. Bei Boards mit vier oder mehr Megabyte Flashspeicher muss der Mode *dio* verwendet werden.
 
 Der erfolgreiche Flash-Vorgang liest sich etwa so:
 
