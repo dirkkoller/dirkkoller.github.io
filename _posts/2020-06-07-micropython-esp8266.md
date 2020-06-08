@@ -8,7 +8,7 @@ permalink: /micropython-esp8266
  Bisher war die Arduino-Plattform mit C/C++ als Sprache das Mittel der Wahl, um Sensoren auszulesen oder Servos anzusteuern. Inzwischen wird Arduino aber gleich von zwei Seiten attackiert. Die 32Bit-Mikrokontroller  ESP8266 bzw. ESP32 von [Espressif](https://www.espressif.com/) werden immer beliebter und machen der Arduino-Hardware Konkurrenz.
 
 ## MicroPython
- Auf ihnen, aber auch auf anderen Mikrokontrollern wie dem Pyboard oder der STM32-Familie, lässt sich ein Python-Derivat namens [**MicroPython**](http://micropython.org/) betreiben, das die Plattform softwareseitig herausfordert. MicroPython ist eine Python 3-Implementierung mit einem abgespeckten Umfang der Standardbibliotheken. Weiterhin  enthalten sind im ehemaligen Kickstarter-Projekt des Australiers Damien George der Compiler, eine Laufzeitumgebung und ein interaktiver Modus zur Befehlseingabe.
+ Auf ihnen, aber auch auf anderen Mikrokontrollern wie dem Pyboard oder der STM32-Familie, lässt sich ein Python-Derivat namens [**MicroPython**](http://micropython.org/) betreiben, das die Arduino-Plattform softwareseitig herausfordert. MicroPython ist eine Python 3-Implementierung mit einem abgespeckten Umfang der Standardbibliotheken. Weiterhin  enthalten sind im ehemaligen Kickstarter-Projekt des Australiers Damien George der Compiler, eine Laufzeitumgebung und ein interaktiver Modus zur Befehlseingabe.
 
 ## Firmware und Esptool
 
@@ -18,7 +18,7 @@ Um MicroPython auf einem der genannten Prozessoren laufen zu lassen, muss die Fi
 
 ## Verkabelung FTDI-Adapter und ESP-01
 
-Hier soll einer der günstigsten ESP8266-Chips, der ESP-01 für einen Test genutzt werden. Er ist für etwa drei Euro erhältlich. Anders als seine teureren "großen Brüder" hat das Modul keinen Mikro-USB-Anschluss. Für den Flashvorgang wird also entweder ein Arduino oder, wie im Folgenden gezeigt, ein USB zu TTL Adapter mit FTDI-Chip benötigt. Der ESP-01 verträgt nur 3,3 Volt, der FTDI-Adapter ist gegebenenfalls auf diesen Wert einzustellen.
+Hier soll einer der günstigsten ESP8266-Chips, der ESP-01 für einen Test genutzt werden. Er ist für etwa drei Euro erhältlich. Anders als seine teureren "großen Brüder" hat das Modul keinen Mikro-USB-Anschluss. Für den Flashvorgang wird also entweder ein Arduino, oder, wie im Folgenden gezeigt, ein USB zu TTL Adapter mit FTDI-Chip benötigt. Der ESP-01 verträgt nur 3,3 Volt, der FTDI-Adapter ist gegebenenfalls auf diesen Wert einzustellen.
 
 Das Pinout des ESP-01 sieht folgendermaßen aus (Blick von oben auf die Bauteile, schlangenförmige WLAN-Antenne rechts):
 
@@ -46,17 +46,17 @@ GND  |  GPIO0
 VCC  |  GPIO2
 
 
-Der FTDI-Adapter sollte als COM-Verbindung unter Windows bzw. als Device im Verzeichnis /dev unter Linux oder MacOS auftauchen. Das Herausfinden des korrekten seriellen Ports ist betriebssystemabhängig und womöglich etwas kniffelig. Je nach Adpater-Modell und Betriebssystem kann auch die Installation eines Treibers erforderlich sein.
+Der FTDI-Adapter sollte als COM-Verbindung unter Windows bzw. als Device im Verzeichnis /dev unter Linux oder MacOS auftauchen. Das Herausfinden des korrekten seriellen Ports ist betriebssystemabhängig und womöglich etwas kniffelig. Je nach Adapater-Modell und Betriebssystem kann auch die Installation eines Treibers erforderlich sein.
 
 ## Flashen des ESP8266
 
-Wenn der Adapter als Gerät gefunden wurde kann mit dem Flashen begonnen werden. Ein typischer Befehl (hier mit einem Port unter MacOS) sieht folgendermaßen aus:
+Wenn der Adapter als Gerät gefunden wurde, kann mit dem Flashen begonnen werden. Ein typischer Befehl (hier mit einem Port unter MacOS) sieht folgendermaßen aus:
 
     esptool.py --port /dev/tty.usbserial-AL0659OL  write_flash --flash_mode qio 0x00000 esp8266-20191220-v1.12.bin
 
 Der Flashmode hängt vom verwendeten Board ab, für das verwendete ESP-01-Modul ist das *qio*.
 
-Der erfolgreich Flash-Vorgang liest sich etwa so:
+Der erfolgreiche Flash-Vorgang liest sich etwa so:
 
 ```
 esptool.py v2.7
@@ -83,7 +83,7 @@ Hard resetting via RTS pin...
 
 ## REPL
 
-Die MicroPython-Firmware ist nun auf dem ESP-Modul und harrt der Dinge die da kommen mögen. Mit dem Programm Screen (unter Mac OS) oder Putty (unter Windows) lässt sich eine Verbindung zum interaktiven Eingabemodus REPL herstellen.
+Die MicroPython-Firmware ist nun auf dem ESP-Modul und harrt der Dinge die da kommen mögen. Mit dem Programm *Screen* (unter Mac OS) oder *Putty* (unter Windows) lässt sich eine Verbindung zum interaktiven Eingabemodus REPL herstellen.
 
     screen /dev/tty.usbserial-AL0659OL 115200
 
