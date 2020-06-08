@@ -7,7 +7,7 @@ permalink: /micropython-esp8266
 
  Bisher war die Arduino-Plattform mit C/C++ als Sprache das Mittel der Wahl, um Sensoren auszulesen oder Servos anzusteuern. Inzwischen wird Arduino aber gleich von zwei Seiten attackiert. Die 32Bit-Mikrokontroller  ESP8266 bzw. ESP32 von [Espressif](https://www.espressif.com/) werden immer beliebter und machen der Arduino-Hardware Konkurrenz.
 
-## MicroPhyton
+## MicroPython
  Auf ihnen, aber auch auf anderen Mikrokontrollern wie dem Pyboard oder der STM32-Familie, lässt sich ein Python-Derivat namens [**MicroPython**](http://micropython.org/) betreiben, das die Plattform softwareseitig herausfordert. MicroPython ist eine Python 3-Implementierung mit einem abgespeckten Umfang der Standardbibliotheken. Weiterhin  enthalten sind im ehemaligen Kickstarter-Projekt des Australiers Damien George der Compiler, eine Laufzeitumgebung und ein interaktiver Modus zur Befehlseingabe.
 
 ## Firmware und Esptool
@@ -87,7 +87,7 @@ Die MicroPython-Firmware ist nun auf dem ESP-Modul und harrt der Dinge die da ko
 
     screen /dev/tty.usbserial-AL0659OL 115200
 
-MicroPhyton meldet sich mit Versionnummer und Hinweis auf die Hilfe:
+MicroPython meldet sich mit Versionnummer und Hinweis auf die Hilfe:
 
     MicroPython v1.12 on 2019-12-20; ESP module with ESP8266
     Type "help()" for more information.
