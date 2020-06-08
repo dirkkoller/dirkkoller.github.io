@@ -5,7 +5,7 @@ categories: MicroPython ESP8266
 permalink: /micropython-esp8266
 ---
 
- Bisher war die Arduino-Plattform mit C/C++ als Sprache das Mittel der Wahl, um Sensoren auszulesen oder Servos anzusteuern. Inzwischen wird Arduino aber gleich von zwei Seiten attackiert. Die 32Bit-Mikrokontroller  ESP8266 bzw. ESP32 von [Espressif](https://www.espressif.com/) werden immer beliebter und machen der Arduino-Hardware Konkurrenz.
+ Bisher war die Arduino-Plattform mit C/C++ als Sprache das Mittel der Wahl, um Sensoren auszulesen oder Servos anzusteuern. Inzwischen wird Arduino aber gleich von zwei Seiten attackiert. Die 32Bit-Mikrokontroller ESP8266 bzw. ESP32 von [Espressif](https://www.espressif.com/) werden immer beliebter und machen der Arduino-Hardware Konkurrenz.
 
 ## MicroPython
  Auf ihnen, aber auch auf anderen Mikrokontrollern wie dem Pyboard oder der STM32-Familie, lässt sich ein Python-Derivat namens [**MicroPython**](http://micropython.org/) betreiben, das die Arduino-Plattform softwareseitig herausfordert. MicroPython ist eine Python 3-Implementierung mit einem abgespeckten Umfang der Standardbibliotheken. Weiterhin  enthalten sind im ehemaligen Kickstarter-Projekt des Australiers Damien George der Compiler, eine Laufzeitumgebung und ein interaktiver Modus zur Befehlseingabe.
@@ -27,9 +27,9 @@ Das Pinout des ESP-01 sieht folgendermaßen aus (Blick von oben auf die Bauteile
     RST   GPIO0
     VCC   Rx
 
-Adapater und das ESP-01-Modul werden wie folgt verkabelt:
+Adapter und das ESP-01-Modul werden wie folgt verkabelt:
 
-Adapater  |  ESP01
+Adapter  |  ESP01
 --|--
 VCC  |  VCC, CH_PD
 GND  |  GND
@@ -40,13 +40,13 @@ Tx  |  Rx
 Vor dem Flashen muss der ESP-01 noch in den Bootloader-Modus versetzt werden. Das geschieht über zwei weitere Verbindungen, die nach dem Flashen aber wieder entfernt werden:
 
 
-Adapater  |  ESP01
+Adapter  |  ESP01
 --|--
 GND  |  GPIO0
 VCC  |  GPIO2
 
 
-Der FTDI-Adapter sollte als COM-Verbindung unter Windows bzw. als Device im Verzeichnis /dev unter Linux oder MacOS auftauchen. Das Herausfinden des korrekten seriellen Ports ist betriebssystemabhängig und womöglich etwas kniffelig. Je nach Adapater-Modell und Betriebssystem kann auch die Installation eines Treibers erforderlich sein.
+Der FTDI-Adapter sollte als COM-Verbindung unter Windows bzw. als Device im Verzeichnis /dev unter Linux oder MacOS auftauchen. Das Herausfinden des korrekten seriellen Ports ist betriebssystemabhängig und womöglich etwas kniffelig. Je nach Adapter-Modell und Betriebssystem kann auch die Installation eines Treibers erforderlich sein.
 
 ## Flashen des ESP8266
 
@@ -87,10 +87,10 @@ Die MicroPython-Firmware ist nun auf dem ESP-Modul und harrt der Dinge die da ko
 
     screen /dev/tty.usbserial-AL0659OL 115200
 
-MicroPython meldet sich mit Versionnummer und Hinweis auf die Hilfe:
+MicroPython meldet sich mit Versionsnummer und Hinweis auf die Hilfe:
 
     MicroPython v1.12 on 2019-12-20; ESP module with ESP8266
     Type "help()" for more information.
     >>>
 
-Hier lassen sich nun Python-Kommandos eingeben.
+Hier lassen sich nun Python-Kommandos eingeben. Der Upload von Python-Programmen in das Dateisystem (unter /pyboard) kann mit der [rshell](https://github.com/dhylands/rshell) erfolgen. Wenn die Datei dabei den Namen *main.py* bekommt, wird sie automatisch ausgeführt.
