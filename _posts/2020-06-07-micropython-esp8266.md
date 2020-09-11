@@ -18,7 +18,7 @@ Um MicroPython auf einem der genannten Prozessoren laufen zu lassen, muss die Fi
 
 ## Verkabelung FTDI-Adapter und ESP-01
 
-Hier soll eines der günstigsten ESP8266-Boards, das ESP-01 für einen Test genutzt werden. Es ist für zwei bis drei Euro erhältlich. Anders als seine teureren "großen Brüder" hat das Modul nur vier GPIOs, lediglich 1MB Flash Memory (im Fall des schwarzen Boards, sonst sogar nur 512KB) und keinen Mikro-USB-Anschluss. Für den Flashvorgang wird entweder ein Arduino, oder, wie im Folgenden gezeigt, ein USB zu TTL Adapter mit FTDI-Chip benötigt. Das ESP-01-Board verträgt nur 3,3 Volt, der FTDI-Adapter ist gegebenenfalls auf diesen Wert einzustellen.
+Hier soll eines der günstigsten ESP8266-Boards, das ESP-01 für einen Test genutzt werden. Es ist für zwei bis drei Euro erhältlich. Anders als seine teureren "großen Brüder" hat das Modul nur vier GPIOs, lediglich 1MB Flash Memory (im Fall des schwarzen Boards, sonst sogar nur 512KB) und keinen Mikro-USB-Anschluss. Für den Flashvorgang wird entweder ein Arduino, oder, wie im Folgenden gezeigt, ein USB zu TTL Konverter mit FTDI-Chip benötigt (Vorsicht, nicht alle davon funktionieren mit dem ESP). Das ESP-01-Board verträgt nur 3,3 Volt, der FTDI-Adapter ist gegebenenfalls auf diesen Wert einzustellen.
 
 Das Pinout des Boards sieht folgendermaßen aus (Blick von oben auf die Bauteile, schlangenförmige WLAN-Antenne rechts):
 
@@ -83,7 +83,7 @@ Hard resetting via RTS pin...
 
 ## REPL
 
-Die MicroPython-Firmware ist nun auf dem ESP-Modul und harrt der Dinge die da kommen mögen. Mit dem Programm *Screen* (unter Mac OS) oder *Putty* (unter Windows) lässt sich eine Verbindung zum interaktiven Eingabemodus REPL herstellen.
+Die MicroPython-Firmware ist nun auf dem ESP-Modul und harrt der Dinge die da kommen mögen. Mit dem Programmen *Screen* (unter Mac OS), *Putty* (unter Windows) oder picocom (Linux) lässt sich eine Verbindung zum interaktiven Eingabemodus *REPL* herstellen. Die Baudrate ist 115200.
 
     screen /dev/tty.usbserial-AL0659OL 115200
 
@@ -94,3 +94,26 @@ MicroPython meldet sich mit Versionsnummer und Hinweis auf die Hilfe:
     >>>
 
 Hier lassen sich nun Python-Kommandos eingeben. Der Upload von Python-Programmen in das Dateisystem (unter /pyboard) kann mit der [rshell](https://github.com/dhylands/rshell) erfolgen. Wenn die Datei dabei den Namen *main.py* bekommt, wird sie automatisch ausgeführt.
+
+## NodeMCU zum Programmieren  
+
+Statt dem USB zu TTL Konverter kann auch ein vorhandenes NodeMCU-Board mit Mikro-USB-Anschluss zum Programmieren genutzt werden. Der EN-Pin wird mit GND verbunden, wodurch der NodeMCU nicht startet. Ansonsten werden Tx, Rx, Gnd und VCC von ESP-01 und NodeMCU einfach durchgeschliffen (Rx und Tx also nicht gekreuzt wie oben) und CH_PD vom ESP-01 wieder mit VCC verbunden:
+
+NodeMCU  |  NodeMCU
+--|--
+GND  |  EN
+
+NodeMCU  |  ESP01
+--|--
+VCC  |  VCC,  CH_PD
+GND  |  GND
+Rx  |  Rx
+Tx  |  Tx
+
+
+Fürs Aufspielen neuer Firmware werden natürlich wieder die zusätzlichen Verbindungen benötigt:
+
+NodeMCU  |  ESP01
+--|--
+GND  |  GPIO0
+VCC  |  GPIO2
