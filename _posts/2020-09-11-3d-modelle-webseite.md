@@ -1,11 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "3D-Modelle auf der Webseite"
 categories: 3D Photogrammetrie
 permalink: /3d-modell-webseite
 ---
 
-<head>
 <!--STYLESHEET-->
 <link type="text/css" rel="stylesheet" href="3dhop/stylesheet/3dhop.css"/>  
 <!--SPIDERGL-->
@@ -24,9 +23,7 @@ permalink: /3d-modell-webseite
 <script type="text/javascript" src="3dhop/js/trackball_pantilt.js"></script>
 <!--UTILITY-->
 <script type="text/javascript" src="3dhop/js/init.js"></script>
-</head>
 
-<body>
 
 Hochauflösende 3D-Modelle wie man sie mit Hilfe von Lascerscanning oder Photogrammetrie erzeugen kann werden schnell recht groß. Anders als ein "von Hand" (also zum Beispiel mit Blender) erzeugtes Modell besteht ein Gebäudemodell schnell aus Millionen von Flächen und ist viele Megabyte groß. Um solch ein riesiges 3d-Modell auf der Webseite trotzdem performant anzuzeigen, eignet sich der *3D Heritage Online Presenter*, kurz *3DHOP*. Das Javascript-Projekt wurde vom italienischen Istituto di Scienza e Tecnologie dell’Informazione “A. Faedo” entwickelt und bietet die Möglichkeit große Modelle auflösungsabhängig in mehrere kleinere Modelle aufzuteilen.
 
@@ -68,11 +65,13 @@ Die Integration von 3DHOP erfolgt, indem zunächst die im Download im Verzeichni
 <script type="text/javascript" src="3dhop/js/trackball_pantilt.js"></script>
 <!--UTILITY-->
 <script type="text/javascript" src="3dhop/js/init.js"></script>
+
 ```
 
 Ist das geschehen, wird der Viewer mit Hilfe eines div-Tags eingebunden. Diesen Bereich kann man anpassen. Es ist zum Beispiel möglich nur einen Teil der Stuerungselemente anzuzeigen oder den Hintergrund auszuwechseln. Details dazu finden sich auf der Webseite des Projekts.
 
 ```html
+
 <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
  <div id="toolbar">
   <img id="home"       title="Home"                  src="3dhop/skins/dark/home.png"         /><br/>
@@ -87,6 +86,7 @@ Ist das geschehen, wird der Viewer mit Hilfe eines div-Tags eingebunden. Diesen 
  </div>
  <canvas id="draw-canvas" style="background-image: url(3dhop/skins/backgrounds/dark.jpg)"/>
 </div>
+
 ```
 
 Zu guter Letzt muss der Viewer mit Hilfe eines JavaScripts initialisiert werden. An dieser Stelle wird auch definiert, wo das anzuzeigende Modell zu finden ist. Im folgenden Beispiel unter models/full.nxz.
@@ -164,4 +164,3 @@ $(document).ready(function(){
 	setup3dhop();
 });
 </script>
-</body>
