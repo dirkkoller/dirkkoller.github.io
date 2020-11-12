@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Georeferenzierung mit QGIS"
-date:   2018-03-30
-author: Dirk Koller
-permalink: georeferenzierung-mit-qgis
+date:   2018-03-30 09:53:28 +0200
+categories: gis
+permalink: /georeferenzierung-mit-qgis
 ---
 
 ![Georeferenzierung mit QGIS]({{site.url}}/images/georeferenzierung-mit-qgis/Georeferenzierung mit QGIS.png)

@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "OpenStreetMap-Daten in QGIS nutzen"
-date:   2018-02-11
-author: Dirk Koller
-permalink: openstreetmap-daten-in-qgis-nutzen
+date:   2018-02-11 09:53:28 +0200
+categories: gis
+permalink: /openstreetmap-daten-in-qgis-nutzen
 ---
 
 ![OpenstreetMap in QGIS]({{site.url}}/images/openstreetmap_qgis_header.png)

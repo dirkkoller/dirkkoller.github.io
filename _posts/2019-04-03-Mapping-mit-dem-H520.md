@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Mapping mit dem H520"
-date:   2019-02-04
-author: Dirk Koller
-permalink: mapping-mit-dem-h520
+date:   2019-02-04 09:53:28 +0200
+categories: mapping
+permalink: /mapping-mit-dem-h520
 ---
+
 
 ![Data Pilot]({{site.url}}/images/data-pilot.jpg)
 
