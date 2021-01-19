@@ -4,6 +4,7 @@ title:  "Atom, der Editor für das 21. Jahrhundert"
 categories: Schreiben Atom
 permalink: /atom-editor/1
 ---
+## Vom Schreiben und Coden
 
 Schreibprogramme lassen sich grob in Editoren und Textverarbeitungen unterteilen. Ein Editor hat dabei nur eingeschränkte Layout- und Formatierungsfunktionen und ein einfaches Textformat, ASCII oder UTF-8.
 
@@ -16,4 +17,4 @@ Der Editor wird also nicht etwa zwischen Entwicklungsumgebung auf der einen und 
 ## Made by Github
 Atom ist ein kostenloser Editor, der von GitHub, der bekannten Hosting-Plattform für Softwareprojekte, entwickelt wird. Das Programm ist in JavaScript mit dem plattformübergreifenden Framework _Electron_ geschrieben und deshalb für zahlreiche Betriebssysteme wie Windows, macOS, Linux und ChromeOS verfügbar. Auf der [Homepage des Projekts](https://atom.io) kann man derzeit Atom in der Version 1.50.0 laden. Die Philosophie des Projekts ist, Erweiterbarkeit wie man sie von Emacs oder Vim kennt, mit Benutzbarkeit zu verknüpfen. Atom soll einfach sein für den Anfänger und mitwachsen mit zunehmender Erfahrung und Ansprüchen. Und das ist ganz hervorragend gelungen!
 
-[Teil 2]({% post_url 2021-01-19-atom-editor-2 %})
+[Weiter zu Teil 2]({% post_url 2021-01-19-atom-editor-2 %})
