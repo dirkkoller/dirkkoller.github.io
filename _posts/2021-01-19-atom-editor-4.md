@@ -25,6 +25,6 @@ Trotz tausender Pakete ist Atom aber doch nicht der beste Editor für Entwickler
 
 Für mich ist Atom derzeit der perfekte Editor, zumindest zum Schreiben. Atom ist schlicht und lenkt nicht ab. Der komplette Platz lässt sich für die Arbeit nutzen und alle wichtigen Kommandos sind, hat man sicher erst mal das Arbeiten mit der Command Palette angewöhnt, über die Tastatur erreichbar.
 
-Dennoch ist Atom mächtig, wenn etwas fehlt findet es man mit einiger Wahrscheinlichkeit in den Tausenden von Community-Paketen. Und im extremen Notfall kann man es sogar selber schreiben (oder zumindest schreiben lassen).
+Dennoch ist Atom mächtig, wenn etwas fehlt, findet es man mit einiger Wahrscheinlichkeit in den Tausenden von Community-Paketen. Und im extremen Notfall kann man es sogar selber schreiben (oder zumindest schreiben lassen).
 
-Die Git-Integration ermöglicht einen tollen Workflow, der nicht nur Entwickler begeistern dürfte. Mit Teletype ist dabei sogar das gleichzeitige Arbeiten an einem Dokument mit anderen möglich.
+Die Git-Integration ermöglicht einen tollen Workflow, der nicht nur Entwickler begeistern dürfte. Mit _Teletype_ ist dabei sogar das gleichzeitige Arbeiten an einem Dokument mit anderen möglich.
