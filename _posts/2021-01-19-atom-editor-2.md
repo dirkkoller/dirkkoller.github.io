@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Atom, der Editor für das 21. Jahrhundert - Teil 2"
 categories: Schreiben Atom
 permalink: /atom-editor/2
