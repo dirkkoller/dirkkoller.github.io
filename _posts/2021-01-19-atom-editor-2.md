@@ -8,7 +8,7 @@ permalink: /atom-editor/2
 ## Einfach einfach
 Das User Interface von Atom ist übersichtlich und aufgeräumt. Kein Ribbon Interface, das versucht die wichtigsten Funktionen zu verstecken und kein Wizard, der helfen soll ein neues Dokument in eine ungewollte Form zu zwängen. Der Editor ist grundsätzlich untergliedert in drei Bereiche: Dem Editor-Bereich (in der Mitte), dem Tree-View (links) und dem Git Tab (rechts).
 
-![Aufbau von Atom](atom-editor/atom.png)
+![Aufbau von Atom](/atom-editor/atom.png)
 
 Geöffnete Dateien werden in Form von Reitern im mittleren Bereich, den Editor Pane, angezeigt. Das ist der Hauptarbeitsbereich, die Reiter können bei Bedarf horizontal oder vertikal aufgesplittet werden.
 
