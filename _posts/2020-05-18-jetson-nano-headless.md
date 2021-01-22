@@ -6,7 +6,7 @@ categories: jetson-nano
 permalink: /jetson-nano-headless
 ---
 
-Die graphische Oberfläche des Jetson Nano ist hinreichend schnell und ganz gut benutzbar. Trotzdem werden viele Nutzer wahrscheinlich gerne auf eine weitere Maus, Tastatur, Monitor oder entsprechende Umschaltmöglichkeiten auf dem Schreibtisch verzichten. Kein Problem, der Nano lässt sich *headless* betreiben, der Zugang erfolgt also von einem anderen Rechner via *ssh* oder *putty*.
+Die graphische Oberfläche des [Jetson Nano](https://amzn.to/2Mc3cdG) ist hinreichend schnell und ganz gut benutzbar. Trotzdem werden viele Nutzer wahrscheinlich gerne auf eine weitere Maus, Tastatur, Monitor oder entsprechende Umschaltmöglichkeiten auf dem Schreibtisch verzichten. Kein Problem, der Nano lässt sich *headless* betreiben, der Zugang erfolgt also von einem anderen Rechner via *ssh* oder *putty*.
 
 Der kleine Rechner muss dazu über ein 5V-Netzteil mit Strom versorgt werden (dazu ist ein Jumper erforderlich, der die beiden Pins zwischen Kamera- und Netzteil-Anschluss überbrückt) und über Micro-USB mit dem Host-Rechner verbunden sein. Außerdem ist ein Netzwerkanschluss zum Beispiel über Ethernetkabel notwendig. Ein Monitor darf dagegen nicht angeschlossen sein, sonst startet der normale graphische Installer. Die Anleitung geht außerdem von einer frisch geflashten SD-Karte aus. Das Jetson Nano Developer Kit SD Card Image erhält man im Jetson Download Center unter https://developer.nvidia.com/embedded/downloads. Momentan ist die Version JP 4.4 vom 21.4.2020 aktuell.
 

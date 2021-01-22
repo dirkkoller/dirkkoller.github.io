@@ -134,8 +134,6 @@ Nun zur Königsdisziplin der RTK-Vermessung, dem Fix, der zentimetergenauen Posi
 
 Die Antenne sollte dafür von einer Metallscheibe gegen Reflexionen von unten abgeschirmt sein und tolle Rundumsicht haben. In einer Häuserschlucht wird man zumindest mit diesem Einphasen-Empfänger keine fixe Position erhalten.
 
-<a target="_blank"  href="https://www.amazon.de/gp/product/3836269333/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3836269333&linkCode=as2&tag=javabits-21&linkId=a704e0035532154b16f74fbf2274f199"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=DE&ASIN=3836269333&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=javabits-21" ></a><img src="//ir-de.amazon-adsystem.com/e/ir?t=javabits-21&l=am2&o=3&a=3836269333" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-
 Wie im [Beitrag DGPS mit RTKLIB]({% post_url 2016-08-07-DGPS mit RTKLIB %}) ausführlicher erläutert werden Korrekturdaten zur Bestimmung der fixen Position benötigt. Diese kann man mit einem zweiten Empfänger selber generieren oder von einem Anbieter (z.B. *SAPOS* in Hessen) via *NTRIP* über das Internet beziehen. Hier wird letzterer Weg beschritten. Zur Einbindung der Korrekturdaten sind die folgenden Änderungen an der Config erforderlich:
 
     inpstr2-type       =ntripcli	 # Inpustream 2 ist ein NTRIP-Client
