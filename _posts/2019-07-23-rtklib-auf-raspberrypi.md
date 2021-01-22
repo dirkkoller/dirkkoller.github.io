@@ -34,7 +34,7 @@ Im gleichen Verzeichnis wird außerdem die Datei wpa_supplicant.conf mit folgend
     psk="WLAN-Passwort"
     }
 
-Der Pi ist damit in der Lage sich in das heimische Netzwerk einzuklinken und über SSH erreichbar. Das probiert man am besten aus indem man den Pi startet (SD-Karte einschieben, Stromversorgung an den äußeren Micro-USB-Port anschließen) und anpingt: 
+Der Pi ist damit in der Lage sich in das heimische Netzwerk einzuklinken und über SSH erreichbar. Das probiert man am besten aus indem man den Pi startet (SD-Karte einschieben, Stromversorgung an den äußeren Micro-USB-Port anschließen) und anpingt:
 
     ping raspberrypi.local
 
@@ -65,12 +65,12 @@ Die auftretenden Warnungen können ignoriert werden. Zeit für Kaffee, das dauer
 ## Device herausfinden
 
 Der ublox-Empfänger wird mit der (inneren) Micro-USB-Buche des Pi mit Hilfe eines USB OTG-Kabel verbunden.
-Nun muss das Device rausgefunden werden, unter dem der Empfänger erreichbar ist (ttyUSB0, ttyUSB1, ttyACM0 usw). 
+Nun muss das Device rausgefunden werden, unter dem der Empfänger erreichbar ist (ttyUSB0, ttyUSB1, ttyACM0 usw).
 
 Am besten probiert man das vermutete Device mit cat /dev/ttyACM0 aus. Im Erfolgsfall sollten Daten des GPS-Empfängers ähnlich den folgenden geliefert werden:
 
 $GNTXT,01,01,02,u-blox AG - www.u-blox.com*4E
-$GNTXT,01,01,02,HW UBX-M80xx 00080000 *43cd 
+$GNTXT,01,01,02,HW UBX-M80xx 00080000 *43cd
 ...
 
 
@@ -92,7 +92,7 @@ Die Konfiguration von RTKLIB ist recht komplex, hier werden nur die erforderlich
 
     file-cmdfile1      =../../../data/ubx_m8t_glo_raw_5hz.cmd	# hier das passende cmd file einsetzen, in dem der Receiver konfiguriert wird (in RTKLIB enthalten)
 
-    pos1-navsys        =5  # GNSS auswählen, 5=GPS+GLONASS 
+    pos1-navsys        =5  # GNSS auswählen, 5=GPS+GLONASS
 
     pos1-posmode       =static	# Der Empfänger steht still und wird nicht etwa herumgefahren
 
@@ -129,10 +129,12 @@ Und der Status angezeigt und automatisch aktualisiert (deshalb die 2):
 
 In der Statusanzeige sollten valide Satelliten auftauchen und die Position (pos) berechnet werden.
 
-## RTKLIB Fix mit Korrekturdaten 
+## RTKLIB Fix mit Korrekturdaten
 Nun zur Königsdisziplin der RTK-Vermessung, dem Fix, der zentimetergenauen Position.
 
 Die Antenne sollte dafür von einer Metallscheibe gegen Reflexionen von unten abgeschirmt sein und tolle Rundumsicht haben. In einer Häuserschlucht wird man zumindest mit diesem Einphasen-Empfänger keine fixe Position erhalten.
+
+<a target="_blank"  href="https://www.amazon.de/gp/product/3836269333/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3836269333&linkCode=as2&tag=javabits-21&linkId=a704e0035532154b16f74fbf2274f199"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=DE&ASIN=3836269333&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=javabits-21" ></a><img src="//ir-de.amazon-adsystem.com/e/ir?t=javabits-21&l=am2&o=3&a=3836269333" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 Wie im [Beitrag DGPS mit RTKLIB]({% post_url 2016-08-07-DGPS mit RTKLIB %}) ausführlicher erläutert werden Korrekturdaten zur Bestimmung der fixen Position benötigt. Diese kann man mit einem zweiten Empfänger selber generieren oder von einem Anbieter (z.B. *SAPOS* in Hessen) via *NTRIP* über das Internet beziehen. Hier wird letzterer Weg beschritten. Zur Einbindung der Korrekturdaten sind die folgenden Änderungen an der Config erforderlich:
 
@@ -148,29 +150,6 @@ Wie im [Beitrag DGPS mit RTKLIB]({% post_url 2016-08-07-DGPS mit RTKLIB %}) ausf
 
     pos2-armode 		=fix-and-hold # Die gewählte Strategie zur Lösung der Phasen-Mehrdeutigkeiten
 
-Ein erneuter Start von *rtkrcv* zeigt in der Statusanzeige zunächst die eingehenden Korrekturdaten an und führt nach ein paar Minuten zum Fix. 
+Ein erneuter Start von *rtkrcv* zeigt in der Statusanzeige zunächst die eingehenden Korrekturdaten an und führt nach ein paar Minuten zum Fix.
 
 ![Positions](/images/rtklib_pi_fix.jpg)
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
- 
