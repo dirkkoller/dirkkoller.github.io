@@ -56,3 +56,5 @@ Das Ausführen des Programms erfolgt erwartungsgemäß mit *Run*. Die grade ausg
 ![image](images/python-jupyter-notebook/jupyter-run.jpg)
 
 Wer möchte kann genau [dieses Notebook ausprobieren](https://mybinder.org/v2/gh/dirkkoller/dirkkoller.github.io/master?filepath=test.ipynb) und bekommt so eine Idee wie das Teilen von Notebooks, hier mittels [binder](https://mybinder.org/), funktioniert (dauert ein paar Sekunden bis es interaktiv ist).
+
+Weitere Infos zu Jupyter finden sich im Buch [Data Science mit Python](https://amzn.to/2Y0Zh6h) von Jake VanderPlass.
