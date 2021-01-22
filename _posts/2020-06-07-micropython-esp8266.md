@@ -117,3 +117,5 @@ NodeMCU  |  ESP01
 --|--
 GND  |  GPIO0
 VCC  |  GPIO2
+
+Weitere Informationen und spannende Projekte finden sich im Buch [Programming with MicroPython](https://amzn.to/3paxOe2) von Nicholas Tollervey.
