@@ -6,7 +6,7 @@ categories: jetson-nano KI
 permalink: /tensorflow-jetson-nano
 ---
 
-Auf Nvidias Jetson-Plattform lassen sich die bekannten Machine Learning-Frameworks wie TensorFlow, PyTorch, Caffee/Caffee2, MXNet und Keras in Form der nativen Vollversionen installieren. In diesem Beitrag wird die Installation des wohl bekanntesten Frameworks, [TensorFlow](https://www.tensorflow.org/) von Google, auf dem Jetson Nano gezeigt.
+Auf Nvidias Jetson-Plattform lassen sich die bekannten Machine Learning-Frameworks wie TensorFlow, PyTorch, Caffee/Caffee2, MXNet und Keras in Form der nativen Vollversionen installieren. In diesem Beitrag wird die Installation des wohl bekanntesten Frameworks, [TensorFlow](https://www.tensorflow.org/) von Google, auf dem [Jetson Nano](https://amzn.to/2Mc3cdG) gezeigt.
 
 Die Installation ist in dem PDF-Dokument [Installing  TensorFlow For Jetson Platform](https://docs.nvidia.com/deeplearning/frameworks/pdf/Install-TensorFlow-Jetson-Platform.pdf) beschrieben. Weil alle Mitglieder der Jetson-Familie, also Nano, TX2 und Xavier auf der gleichen Softwareplattform, dem *JetPack* beruhen, läuft die Installation auch für alle gleich ab.
 
