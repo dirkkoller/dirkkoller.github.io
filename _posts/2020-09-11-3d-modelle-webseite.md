@@ -5,6 +5,16 @@ categories: 3D Photogrammetrie
 permalink: /3d-modell-webseite
 ---
 
+Hochauflösende 3D-Modelle wie man sie mit Hilfe von Lascerscanning oder Photogrammetrie erzeugen kann werden schnell recht groß. Anders als ein "von Hand" (also zum Beispiel mit Blender) erzeugtes Modell besteht ein Gebäudemodell schnell aus Millionen von Flächen und ist viele Megabyte groß. Um solch ein riesiges 3d-Modell auf der Webseite trotzdem performant anzuzeigen, eignet sich der *3D Heritage Online Presenter*, kurz *3DHOP*. Das Javascript-Projekt wurde vom italienischen Istituto di Scienza e Tecnologie dell’Informazione “A. Faedo” entwickelt und bietet die Möglichkeit große Modelle auflösungsabhängig in mehrere kleinere Modelle aufzuteilen.
+
+Der Viewer lädt dann selbständig während des Betrachtens die erforderlichen Teile nach. 3DHOP nutzt intern WebGL 2, das von Safari nicht unterstützt wird. Wer diese Seite also mit einem Apple-Gerät anzeigt sollte dies mit Chrome oder Firefox tun um die 3D-Präsentation auch zu sehen. 
+
+Die Integration von 3DHOP erfolgt, indem zunächst die im Download im Verzeichnins *minimal* enthaltenen Ordner js, css und skins dem Webprojekt zugefügt werden. Anschließend sind die css- und js-Dateien im Head-Bereich des HTML-Codes einzubinden.
+
+Ist das geschehen, wird der Viewer mit Hilfe eines div-Tags eingebunden. Diesen Bereich kann man anpassen. Es ist zum Beispiel möglich nur einen Teil der Stuerungselemente anzuzeigen oder den Hintergrund auszuwechseln. Details dazu finden sich auf der Webseite des Projekts.
+
+Zu guter Letzt muss der Viewer mit Hilfe eines JavaScripts initialisiert werden. An dieser Stelle wird auch definiert, wo das anzuzeigende Modell zu finden ist.
+
 
 <!--STYLESHEET-->
 <link type="text/css" rel="stylesheet" href="3dhop/stylesheet/3dhop.css"/>  
@@ -40,17 +50,6 @@ permalink: /3d-modell-webseite
  </div>
  <canvas id="draw-canvas" style="background-image: url(3dhop/skins/backgrounds/dark.jpg)"/>
 </div>
-
-Hochauflösende 3D-Modelle wie man sie mit Hilfe von Lascerscanning oder Photogrammetrie erzeugen kann werden schnell recht groß. Anders als ein "von Hand" (also zum Beispiel mit Blender) erzeugtes Modell besteht ein Gebäudemodell schnell aus Millionen von Flächen und ist viele Megabyte groß. Um solch ein riesiges 3d-Modell auf der Webseite trotzdem performant anzuzeigen, eignet sich der *3D Heritage Online Presenter*, kurz *3DHOP*. Das Javascript-Projekt wurde vom italienischen Istituto di Scienza e Tecnologie dell’Informazione “A. Faedo” entwickelt und bietet die Möglichkeit große Modelle auflösungsabhängig in mehrere kleinere Modelle aufzuteilen.
-
-Der Viewer lädt dann selbständig während des Betrachtens die erforderlichen Teile nach. 3DHOP nutzt intern WebGL 2, das von Safari nicht unterstützt wird. Wer diese Seite also mit einem Apple-Gerät anzeigt sollte dies mit Chrome oder Firefox tun um die 3D-Präsentation auch zu sehen.
-
-Die Integration von 3DHOP erfolgt, indem zunächst die im Download im Verzeichnins *minimal* enthaltenen Ordner js, css und skins dem Webprojekt zugefügt werden. Anschließend sind die css- und js-Dateien im Head-Bereich des HTML-Codes einzubinden.
-
-Ist das geschehen, wird der Viewer mit Hilfe eines div-Tags eingebunden. Diesen Bereich kann man anpassen. Es ist zum Beispiel möglich nur einen Teil der Stuerungselemente anzuzeigen oder den Hintergrund auszuwechseln. Details dazu finden sich auf der Webseite des Projekts.
-
-Zu guter Letzt muss der Viewer mit Hilfe eines JavaScripts initialisiert werden. An dieser Stelle wird auch definiert, wo das anzuzeigende Modell zu finden ist.
-
 
 <script type="text/javascript">
 var presenter = null;
