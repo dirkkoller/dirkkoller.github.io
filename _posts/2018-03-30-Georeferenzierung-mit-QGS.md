@@ -33,18 +33,15 @@ Dazu wird das Foto im Georeferencer geladen (*File > Open Raster*). Im sich öff
 
 ![Zufügen eines Kontrollpunktes]({{site.url}}/images/georeferenzierung-mit-qgis/AddPoint.png)
 
-Um gute Ergebnisse zu erhalten sollten mindestens fünf Referenzpunkte, gleichmäßig verteilt über das zu korrigierende Bild vorliegen und markiert werden. Im Beispiel hier ist die Verteilung der Punkte nicht optimal (aber auseichend, um das Vorgehen zu demonstrieren)
+Um gute Ergebnisse zu erhalten sollten mindestens fünf Referenzpunkte, gleichmäßig verteilt über das zu korrigierende Bild vorliegen und markiert werden. Im Beispiel hier ist die Verteilung der Punkte nicht optimal (aber ausreichend, um das Vorgehen zu demonstrieren)
 
 ![Alle GCPs gesetzt]({{site.url}}/images/georeferenzierung-mit-qgis/Punkte gesetzt.png)
 
 
-Sind die bekannten Punkte erfasst, wird die Georeferenzierung mit *File > Start Georeferencing* in die Wege geleitet. Im sich öffnenden Settings-Dialog müssen das Output-Raster und der Transformations-Typ bestimmt werden. Transformationen höheren Grades benötigen mehr Punkte, können aber durch mehr Freiheitsgrade zu besseren Ergebnissen führen. Mit den hier gesetzten fünf Punkten lässt sich maximal eine Transformation vom Typ *Polynomial 1* durchführen. Außerdem ist es empfehlenswert, die beiden Reports generieren zu lassen. 
-Nach der Georeferenzierung lässt sich das Ergebnis in QGIS visualisieren. Wie dem folgenden Screenshot zu entnehmen ist, wurde die Luftaufnahme nach der Transformation ganz passabel in die Hintergrundkarte (die ja auch nicht exakt ist) eingefügt. Die Schienen passen nicht ganz genau aneinander, der Fehler liegt in der Größenordnung einer Schienenbreite. 
+Sind die bekannten Punkte erfasst, wird die Georeferenzierung mit *File > Start Georeferencing* in die Wege geleitet. Im sich öffnenden Settings-Dialog müssen das Output-Raster und der Transformations-Typ bestimmt werden. Transformationen höheren Grades benötigen mehr Punkte, können aber durch mehr Freiheitsgrade zu besseren Ergebnissen führen. Mit den hier gesetzten fünf Punkten lässt sich maximal eine Transformation vom Typ *Polynomial 1* durchführen. Außerdem ist es empfehlenswert, die beiden Reports generieren zu lassen.
+Nach der Georeferenzierung lässt sich das Ergebnis in QGIS visualisieren. Wie dem folgenden Screenshot zu entnehmen ist, wurde die Luftaufnahme nach der Transformation ganz passabel in die Hintergrundkarte (die ja auch nicht exakt ist) eingefügt. Die Schienen passen nicht ganz genau aneinander, der Fehler liegt in der Größenordnung einer Schienenbreite.
 Besser verteilte Passpunkte hätten hier zu einem deutlich besseren Ergebnis geführt.
-
 
 ![QGIS]({{site.url}}/images/georeferenzierung-mit-qgis/ergebnis.png)
 
-
-
-
+Mehr zu QGIS in [Learn QGis](https://amzn.to/3cPoCXC) von Andrew Cutts und Anita Graser.
