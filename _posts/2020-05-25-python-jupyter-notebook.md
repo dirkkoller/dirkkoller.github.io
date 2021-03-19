@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: redirected
 title:  "Python mit Jupyter Notebook"
 date:   2020-05-13
 categories: python
 permalink: /python-jupyter-notebook
+redirect_to:  https://pythonbits.de/tools/python-jupyter-notebook
 ---
 
 Es gibt eine ganze Reihe ausgezeichneter IDEs für Python. Zum Publizieren, Teilen, Visualisieren und Dokumentieren von eigenen Projekten ist allerdings das **[Jupyter Notebook](https://jupyter.org/)** der Standard. Das gilt insbesondere für den wissenschaftlichen Bereich.
