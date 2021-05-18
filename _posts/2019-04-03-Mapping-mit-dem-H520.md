@@ -24,13 +24,13 @@ Um georeferenzierte Karten zu erhalten, werden Geokoordinaten benötigt. Die E90
 </figure>
 
 
- Das Einmessen der Kontrollpunkte muss möglichst exakt, also zum Beispiel mit RTK GPS (Genauigkeit etwa 1 cm) erfolgen. Für eine gute Georeferenzierung werden zwischen fünf und acht gleichmäßig verteilte GCPs benötigt. Weitere eingemessene Punkte verbessern das Ergebnis nicht, können aber zur abschließenden Qualitätskontrolle als Checkpoints verwendet werden. Steht ein spezieller Ort wie zum Beispiel ein Gebäude im Fokus der Vermessung, ist ein Kontrollpunkt in der Nähe dieses Orts von Vorteil. 
+ Das Einmessen der Kontrollpunkte muss möglichst exakt, also zum Beispiel mit RTK GPS (Genauigkeit etwa 1 cm) erfolgen. Für eine gute Georeferenzierung werden zwischen fünf und acht gleichmäßig verteilte GCPs benötigt. Weitere eingemessene Punkte verbessern das Ergebnis nicht, können aber zur abschließenden Qualitätskontrolle als Checkpoints verwendet werden. Steht ein spezieller Ort wie zum Beispiel ein Gebäude im Fokus der Vermessung, ist ein Kontrollpunkt in der Nähe dieses Orts von Vorteil.
 
 Die Kontrollpunkte sollten aus der Luft gut erkennbar und am Boden fixiert sein. Je nach Flughöhe ist ein flaches Objekt etwa in der Größe eines Bierdeckels gut geeignet. Nicht optimal sind die oft vorhandenen rot lackierten Absteckpfähle auf Baustellen. Die vertikale Ausdehnung (die 3-Dimensionalität) des Pflocks erschwert erfahrungsgemäß das Erkennen und genaue Markieren in der Software.
 
 
 ### Einstellungen für den automatischen Flug
-Der Flugcontroller des H520 ermöglich autonome Fotoflüge mit automatischem Start und Landung. Die Arbeit des Piloten liegt eher bei der Vorbereitung des Flugs. Die Planung wird mit der Software *[DataPilot][datapilot]*, entweder auf dem Display der Fernbedienung oder komfortabler auf dem Desktop mit der Mac- oder Windows-Version von DataPilot durchgeführt. Das Markieren des Fluggebietes erfolgt im Survey-Modus, bei dem ein Raster mit dem zu befliegenden Areal auf eine Karte gezogen wird (siehe Abbildung oben). 
+Der Flugcontroller des H520 ermöglich autonome Fotoflüge mit automatischem Start und Landung. Die Arbeit des Piloten liegt eher bei der Vorbereitung des Flugs. Die Planung wird mit der Software *[DataPilot][datapilot]*, entweder auf dem Display der Fernbedienung oder komfortabler auf dem Desktop mit der Mac- oder Windows-Version von DataPilot durchgeführt. Das Markieren des Fluggebietes erfolgt im Survey-Modus, bei dem ein Raster mit dem zu befliegenden Areal auf eine Karte gezogen wird (siehe Abbildung oben).
 
 Im rechts eingeblendeten Fenster sind die Flugparameter einzugeben. Neben der Überlappung - mindestens 75% frontal und 60% seitlich für gute Ergebnisse – ist die Flughöhe ein wichtiger Parameter. Sie hat direkte Auswirkungen auf die Genauigkeit des Ergebnisses. Umso tiefer geflogen wird, umso detaillierter sind die Fotos und später das resultierende Artefakt. Umso länger dauert allerdings auch der Flug, was zu Problemen mit dem Akku führen könnte. Beim H520 hält der Akku fast 30 Minuten und kann sogar während einer Befliegung gewechselt werden. Die erwartete Genauigkeit bei der eingestellten Höhe wird in Form der Ground resolution (auch *Ground Sampling Distance*, GSD) berechnet. Ein Wert von 1 cm/px bedeutet, dass ein realer Zentimeter als 1 Pixel im Modell abgebildet wird. Wer Wert auf hohe Genauigkeit legt, sollte noch die Kreuzbefliegung aktivieren (Refly at 90 degree offset), bei der das Areal zusätzlich im 90°-Winkel beflogen wird. Auch dieser Punkt wirkt sich auf die Flugzeit aus, die ebenfalls im Vorhinein berechnet wird. Darüber hinaus sollte die Anzahl der resultierenden Fotos bedacht werden. 500 Bilder einer Befliegung mögen ein tolles Modell liefern, könnten aber bei der Auswertung den Rechner überfordern.
 
@@ -40,3 +40,5 @@ Entsprechen alle Einstellungen den Wünschen müssen die Flugdaten noch auf die 
 
 [pix4d]: https://www.pix4d.com
 [datapilot]: http://de.commercial.yuneec.com/comm-de-datapilot
+
+<img src="https://vg08.met.vgwort.de/na/5c6489c3a0784a958ef37ff539da5df9" width="1" height="1" alt=">
