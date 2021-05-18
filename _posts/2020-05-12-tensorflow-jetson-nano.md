@@ -35,3 +35,5 @@ Das Ausführen aller Anweisungen benötigt auf dem Nano etwa zwei Stunden. Ob di
 ![Erfolgreiche Installation von TensorFlow](/images/tensorflow-jetson-nano/tensorflow-jetson-nano.png)
 
 Ist das der Fall, ist TensorFlow einsatzbereit.
+
+<img src="https://vg08.met.vgwort.de/na/dc20656f2df942b3bfc32408814a7e50" width="1" height="1" alt=">
