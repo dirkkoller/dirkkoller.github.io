@@ -151,3 +151,5 @@ Wie im [Beitrag DGPS mit RTKLIB]({% post_url 2016-08-07-DGPS mit RTKLIB %}) ausf
 Ein erneuter Start von *rtkrcv* zeigt in der Statusanzeige zunächst die eingehenden Korrekturdaten an und führt nach ein paar Minuten zum Fix.
 
 ![Positions](/images/rtklib_pi_fix.jpg)
+
+<img src="https://vg08.met.vgwort.de/na/0e122578408e4095abf45a7d732e7db4" width="1" height="1" alt=">
