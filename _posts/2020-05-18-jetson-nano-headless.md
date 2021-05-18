@@ -23,3 +23,5 @@ Bei erfolgreicher Verbindung fragt der Installationsassistent *oem-config* dann 
     ssh dirk@jetson-nano
 
 Der Vorgang ist ausführlicher im [NVIDIA Jetson Linux Developer Guide](https://docs.nvidia.com/jetson/l4t/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fflashing.html%23wwpID0E0KD0HA) beschrieben.
+
+<img src="https://vg08.met.vgwort.de/na/ce4b815a8fa74c71af183f2633209dfd" width="1" height="1" alt=">
