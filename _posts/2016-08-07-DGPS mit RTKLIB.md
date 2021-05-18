@@ -23,7 +23,7 @@ Wer im Internet nach Differential GPS sucht, landet recht bald auf der Seite [rt
 
 Nach dem Start von *rtknavi* wird zunächst mit Hilfe eines mit einem mit *I* beschriftetem Button in der rechten oberen Ecke der Inputstream eingestellt:
 
-- Häkchen bei *Rover* 
+- Häkchen bei *Rover*
 - Type *Serial*
 - Opt: Port Com3 (zum Beispiel)
 - Format: *u-blox*
@@ -41,7 +41,7 @@ Dann werden folgende "Commands at Startup" benötigt:
 
 !UBX CFG-MSG 1 32 0 1 0 1 0 0
 
-Die beiden CFG-GNSS-Kommandos regeln die Kanalvergabe an GPS und GLONASS. Die darauf folgenden-CFG-MSG Kommandos aktivieren die Ausgabe der Nachrichten TRK-MEAS, TRK-SFRBX und NAV-CLOCK+NAV-TIMEGPS auf USB und UART1. 
+Die beiden CFG-GNSS-Kommandos regeln die Kanalvergabe an GPS und GLONASS. Die darauf folgenden-CFG-MSG Kommandos aktivieren die Ausgabe der Nachrichten TRK-MEAS, TRK-SFRBX und NAV-CLOCK+NAV-TIMEGPS auf USB und UART1.
 
 Hinweis: Die Kommandos wurden einem Script zur Konfiguration eines M8N entnommen, den M8T kann man alternativ und bequemer in u-Blox Center konfigurieren. Dabei wird allerdings die Konfiguration des Receiver dauerhaft verändert (was für Einstieg vielleicht erst mal keine gute Idee ist).
 
@@ -58,12 +58,12 @@ Nach ein paar Minuten warten erhält man eine *Single Solution*, also eine unkor
 ## SAPOS
 
 Richtig genau wird die Position erst durch Korrektur mit Hilfe der Daten einer eingemessenen Referenzstation. Die Referenzdaten kann man über Funk oder wie hier gezeigt als NTRIP-Daten über das Internet beziehen. Ein flächendeckendes Netz von permanent betriebenen GNSS-Referenzstationen wird in Deutschland von den Landesämtern für Bodenmanagement und Geoinformation unter dem Namen SAPOS zur Verfügung gestellt. Um SAPOS nutzen zu können, muss man sich dort zunächst anmelden. Die Kosten für die Nutzung betragen je nach Dienst 10 oder 20 Cent pro Minute, mindestens jedoch 10 Euro pro Monat. UPDATE: SAPOS ist zumindest in Hessen seit Januar 2019 kostenlos!
- 
+
 Zur Verwendung der Daten wird ein weiterer InputStream (Button *I* rechts oben) konfiguriert:
 
-- Häkchen bei *Base Station* 
+- Häkchen bei *Base Station*
 - Type *Ntrip-Client*
-- Opt: 
+- Opt:
 	-NTRIP Caster Host:	62.225.76.202
 	-Port: 2101
 	-Mountpoint: MAC_3_2G_HE
@@ -75,7 +75,7 @@ Außerdem muss bei *Transmit NMEA GPGGA to Base Station* die Option  *Single Sol
 
 ![Input Streams](/images/InputStreams.png)
 
-Schließlich geht's noch mal in die Optionen. Unter Setting1 wird als Positioning Mode nun *Static* (rtk-korrigierte Daten für einen unbeweglichen Empfänger) ausgewählt. Der M8T ist ein Einfrequenzempfänger, so dass lediglich die Daten des L1-Frequenzbands ausgewertet werden können (inzwischen gibt es auch preisgünstige Dualbandempfänger, mehr dazu im [Beitrag über den ZED-F9P]({% post_url 2019-01-21-preiswerter-gps-dual-band-empfaenger-zed-f9p %})). 
+Schließlich geht's noch mal in die Optionen. Unter Setting1 wird als Positioning Mode nun *Static* (rtk-korrigierte Daten für einen unbeweglichen Empfänger) ausgewählt. Der M8T ist ein Einfrequenzempfänger, so dass lediglich die Daten des L1-Frequenzbands ausgewertet werden können (inzwischen gibt es auch preisgünstige Dualbandempfänger, mehr dazu im [Beitrag über den ZED-F9P]({% post_url 2019-01-21-preiswerter-gps-dual-band-empfaenger-zed-f9p %})).
 
 ![Setting1](/images/Setting1.png)
 
@@ -94,3 +94,4 @@ Wenn es die Bedingungen (Ionosphärenwetter, Satellitenkonstellation, freie Rund
 
 Wenn's nicht klappt, lässt sich durch einen Klick auf das kleine Quadrat über dem Start-Button der RTK-Monitor öffnen, der wertvolle Tipps (zum Beispiel im Bereich Error/Warning gibt).
 
+<img src="https://vg08.met.vgwort.de/na/0fa4c785f7b8445fb3978392e3200fb6" width="1" height="1" alt=">
