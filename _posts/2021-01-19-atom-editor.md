@@ -87,3 +87,5 @@ Für mich ist Atom derzeit der perfekte Editor, zumindest zum Schreiben. Atom is
 Dennoch ist Atom mächtig, wenn etwas fehlt, findet es man mit einiger Wahrscheinlichkeit in den Tausenden von Community-Paketen. Und im extremen Notfall kann man es sogar selber schreiben (oder zumindest schreiben lassen).
 
 Die Git-Integration ermöglicht einen tollen Workflow, der nicht nur Entwickler begeistern dürfte. Mit _Teletype_ ist dabei sogar das gleichzeitige Arbeiten an einem Dokument mit anderen möglich.
+
+<img src="https://vg08.met.vgwort.de/na/2f397182ae9e4bfeb9055cb8611f53a0" width="1" height="1" alt=">
