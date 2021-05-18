@@ -35,3 +35,5 @@ QGIS erlaubt das Zufügen von osm.pbf-Dateien als Vector-Layer. Via Layer > Add 
 [geofabrik]: http://www.geofabrik.de
 [download-geofabrik]: http://download.geofabrik.de
 [osmosis]: http://wiki.openstreetmap.org/wiki/Osmosis
+
+<img src="https://vg08.met.vgwort.de/na/9d671b651a3c4672b9113af7fb585c5f" width="1" height="1" alt=">
