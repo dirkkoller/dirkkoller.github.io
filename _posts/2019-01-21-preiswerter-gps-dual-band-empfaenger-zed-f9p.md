@@ -35,3 +35,4 @@ Zur Bestimmung von zentimetergenauen Positionen mittels RTK GPS wird eine RTK-En
 
 Low-Cost RTK GPS war zumindest in Deutschland schon länger möglich. Mit Galileo, kostenlosen Korrekturdaten und dem preisgünstigen Dualband-Receiver ZED-F9P macht es nun auch wirklich Spaß. Wer sich genauer für technische Daten und Messwerte zum ZED-F9P interessiert, findet im Blog [rtklibexplorer](https://rtklibexplorer.wordpress.com) detaillierte Informationen.
 
+<img src="https://vg08.met.vgwort.de/na/a1252b559d264faf91a3d572a6e4b073" width="1" height="1" alt=">
