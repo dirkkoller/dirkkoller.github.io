@@ -2,6 +2,8 @@
 layout: page
 title: Impressum
 permalink: /impressum/
+sitemap:
+  exclude: 'yes'
 ---
 
 Dr. Dirk Koller
