@@ -21,10 +21,10 @@
 title: dirkkoller.de
 email: info@dirkkoller.de
 description: >- # this means to ignore newlines until "baseurl:"
-  Raspberry Pi - ESP32 ESP8266 - Deep Learning - Python - Micropython - RTK - GPS -Drohnen -GIS - Java - Spring 
+  Raspberry Pi - ESP32 ESP8266 - Deep Learning - Python - Micropython - RTK - GPS -Drohnen -GIS - Java - Spring
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.dirkkoller.de" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dirkkoller
 github_username:
 
