@@ -5,9 +5,7 @@ categories: gps
 permalink: /asciidoc
 ---
 
-GPS im Autonavi oder beim Wandern ist ein alter Hut. Für neue Technologien wie autonome Fahrzeuge oder Lieferdrohnen wird mit allerhand Tricks eine erstaunliche Genauigkeit aus der alten Technik geholt.
-
-Was findet sich in Autos, Drohnen, Rasenmähern, Hundehalsbändern und - mit einiger Wahrscheinlichkeit - sogar grade jetzt in Ihrer Hosentasche? Richtig, ein GPS. Das amerikanische Navigationssystem mit seinen Konkurrenten GLONASS und Galileo ist allgegenwärtig. Die Anforderungen an die Genauigkeit der Geräte hängen vom Verwendungszweck ab. Wer GPS zur Aufzeichnung der morgendlichen Jogging-Runde oder als Lotse für die Urlaubsreise einsetzt, kommt mit ein paar Metern Abweichung gut aus.
+Das amerikanische Navigationssystem mit seinen Konkurrenten GLONASS und Galileo ist allgegenwärtig. Die Anforderungen an die Genauigkeit der Geräte hängen vom Verwendungszweck ab. Wer GPS zur Aufzeichnung der morgendlichen Jogging-Runde oder als Lotse für die Urlaubsreise einsetzt, kommt mit ein paar Metern Abweichung gut aus.
 Anders sieht es im Precision Farming, aus, wo große Geräte wie Mähdrescher ihre Arbeit womöglich demnächst autonom verrichten sollen. Hier muss die ermittelte Position schon im Bereich von einem Dezimeter liegen damit der Feldweg nicht in Mitleidenschaft gezogen wird. Ähnlich ist die Lage bei zukünftigen Lieferdrohnen, das Paket soll schließlich nicht in Nachbars Kirschbaum landen.
 Auf die Spitze getrieben werden die Anforderungen in der Vermessung. GNSS, so die eigentlich korrekte Abkürzung für Satellitennavigationssatellitensysteme, steht hier in Konkurrenz zu bewährten aber arbeitsintensiven Geräten wie Tachymeter und Theodolit. Und die ermöglichen Genauigkeiten von einem Zentimeter oder darunter.
 
@@ -18,7 +16,6 @@ Derart hohe Genauigkeiten waren vor Beginn des Satellitenzeitalters zumindest Ko
 Die Probleme sind vielgestaltig und haben entgegen hartnäckigen Gerüchten nichts mehr mit einer aus militärischem Gründen absichtlich herbeigeführten Verschlechterung des GPS-Signal zu tun (diese ist seit dem Jahr 2000 nicht mehr in Betrieb). Zunächst einmal wird die Genauigkeit der Streckenmessung durch fehlerhafte Bahndaten und Fehler in den Satellitenuhren beeinflusst. Eine weitere Fehlerquelle sind Signalausbreitungsfehler durch die unterschiedliche Brechung des Signals in Iono- und Troposphäre,  aber auch durch Reflektion des Signals an Gebäuden. Schließlich treten noch Empfängerfehler wie das frequenzabhängige thermische Messrauschen oder hardwarebedingte Verzögerungen auf. In der Summe ergeben sich Standardabweichungen von etwa 5 Metern, wobei die Signalausbreitung in der Ionosphäre den größten Beitrag zum Messfehler liefert.
 
 
-----------------------------------------------------------------------------------
 ## Mathestunde: Trilateration
 GPS basiert auf dem Prinzip der Trilateration: Satelliten senden mit Hilfe sehr exakter Uhren an Bord ihre Position und einen Zeitstempel an den Empfänger auf der Erde. Je nach Entfernung kommen die Signale verschiedener Satelliten bei gleichzeitigem Ausstrahlen des Signals also mit leichtem zeitlichen Versatz beim Empfänger an. Der Empfänger vergleicht die Absendezeit im Zeitstempel mit der Empfangszeit im Empfänger und bestimmt so die Reisedauer. Die Empfänger können aus dieser Laufzeit der Radiowellen und der bekannten Reisegeschwindigkeit (300.000 km/s) die zurückgelegte Strecke berechnen. Zusammen mit der übertragenen Position des Satelliten lässt sich damit ein Kreis auf der Erdoberfläche errechnen, von dem jeder Punkt der Kreislinie als die gesuchte Position in Frage kommt. Zu allen Positionen auf diesem Kreis ist das Signal exakt die errechnete Zeit unterwegs. Werden die Signale zweier Satelliten empfangen, schneiden sich zwei Kreise, und es kommen nur noch die Schnittpunkte als Position in Frage. Ab dem dritten Signal ist die gesuchte Position - der Schnittpunkt der drei Kreise - eindeutig bestimmt.
 
@@ -26,11 +23,9 @@ GPS basiert auf dem Prinzip der Trilateration: Satelliten senden mit Hilfe sehr 
 
 In der Praxis wird ein vierter Satellit benötigt, weil die Uhren der Empfänger aus Kostengründen nicht die erforderliche Genauigkeit besitzen und dieser Empfängeruhrenfehler korrigiert werden muss.  
 
-----------------------------------------------------------------------------------
-
 
 ## Optimiert und korrigiert
-<!-- _(Dann kommt so langsam ein Schimmer für Verbesserungen um die Eck: D-GPS, RTK, Mehrfrequenzempfang. Was bringen Glonass und Galileo (und die anderen) an Genauigkeit, ich werde das immer wieder gefragt), Verweis auf Smartphone-Chips, die GNSS-Daten in bestimmter Reihenfolge abfragen und kombinieren. In angemessener Länge erklären, was man damit an Genauigkeit erzielen kann, wie hoch der Aufwand ist und wie jedermanntauglich das ist._ -->
+
 
 Aus diesem Grund wurden verschiedene Möglichkeiten zur Optimierung von GPS entwickelt. Einige dieser Systeme setzen auf Korrektursignale, beispielsweise von zusätzlichen Satelliten oder Mobilfunknetzen, die in die Berechnung mit einbezogen werden. Beispiele dafür sind der Wide-Area Augmentation Service (WAAS) bzw. die europäische Variante _European Geostationary Navigation Overlay Service (EGNOS)_ mit 2-5 Metern Genauigkeit oder das vergleichbare _Assisted GPS (A-GPS)_. Ein anderer Ansatz nutzt an Stelle der normalerweise verwendeten Codephase mit Zeitstempel die übertragenden Radiowellen zur Ermittlung der Entfernung zu den Satelliten (Precise Point Positioning, kurz PPP,  mit Genauigkeiten zwischen 20 und 50 Zentimetern). Das Differential Global Positioning System (DGPS) mit 0,02-0,05 Metern Genauigkeit arbeitet dagegen mit Referenzstationen. Dabei wird die Position für eine eingemessene Station zu einer gegebenen Zeit ermittelt, und die dabei aufgetretene Abweichung auf die eigentlich zu messende Position (den Rover) per Funk oder über das Internet übertragen. Die Entfernung zwischen Basis und Rover wird als Baseline bezeichnet, sie sollte nicht größer als etwa 10 Kilometer sein, damit das Verfahren funktioniert.
 
