@@ -152,4 +152,4 @@ Ein erneuter Start von *rtkrcv* zeigt in der Statusanzeige zunächst die eingehe
 
 ![Positions](/images/rtklib_pi_fix.jpg)
 
-<img src="https://vg08.met.vgwort.de/na/0e122578408e4095abf45a7d732e7db4" width="1" height="1" alt=">
+<img src="https://vg08.met.vgwort.de/na/0e122578408e4095abf45a7d732e7db4" width="1" height="1" alt="">
