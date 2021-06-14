@@ -46,4 +46,4 @@ Besser verteilte Passpunkte hätten hier zu einem deutlich besseren Ergebnis gef
 
 Mehr zu QGIS in [Learn QGis](https://amzn.to/3cPoCXC) von Andrew Cutts und Anita Graser.
 
-<img src="https://vg08.met.vgwort.de/na/9210e49cdd83406aa2d3a5dca1555c7a" width="1" height="1" alt=">
+<img src="https://vg08.met.vgwort.de/na/9210e49cdd83406aa2d3a5dca1555c7a" width="1" height="1" alt="">

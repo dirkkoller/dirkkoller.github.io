@@ -94,4 +94,4 @@ Wenn es die Bedingungen (Ionosphärenwetter, Satellitenkonstellation, freie Rund
 
 Wenn's nicht klappt, lässt sich durch einen Klick auf das kleine Quadrat über dem Start-Button der RTK-Monitor öffnen, der wertvolle Tipps (zum Beispiel im Bereich Error/Warning gibt).
 
-<img src="https://vg08.met.vgwort.de/na/0fa4c785f7b8445fb3978392e3200fb6" width="1" height="1" alt=">
+<img src="https://vg08.met.vgwort.de/na/0fa4c785f7b8445fb3978392e3200fb6" width="1" height="1" alt="">

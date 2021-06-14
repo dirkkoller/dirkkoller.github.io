@@ -41,4 +41,4 @@ Entsprechen alle Einstellungen den Wünschen müssen die Flugdaten noch auf die 
 [pix4d]: https://www.pix4d.com
 [datapilot]: http://de.commercial.yuneec.com/comm-de-datapilot
 
-<img src="https://vg08.met.vgwort.de/na/5c6489c3a0784a958ef37ff539da5df9" width="1" height="1" alt=">
+<img src="https://vg08.met.vgwort.de/na/5c6489c3a0784a958ef37ff539da5df9" width="1" height="1" alt="">

@@ -31,4 +31,4 @@ Noch genauere Positionen erhält man durch Korrektur der Daten mit denen einer R
 ## Postprocessing
 Das zuvor beschriebene Verfahren kann auch nachträglich angewendet werden, das heißt, die erfassten Daten werden erst später mit den herunter geladenen Daten einer echten oder virtuellen Referenzstation korrigiert. Man spricht dann von *Postprocessing* oder genauer *Post-Processed Kinematic (PPK)*.
 
-<img src="https://vg08.met.vgwort.de/na/cc745219c28d427d8049ee497c3391b2" width="1" height="1" alt=">
+<img src="https://vg08.met.vgwort.de/na/cc745219c28d427d8049ee497c3391b2" width="1" height="1" alt="">

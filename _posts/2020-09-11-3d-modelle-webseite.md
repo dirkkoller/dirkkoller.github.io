@@ -87,4 +87,4 @@ $(document).ready(function(){
 });
 </script>
 
-<img src="https://vg08.met.vgwort.de/na/39863c183c614df7b46ddc8a5aff58d8" width="1" height="1" alt=">
+<img src="https://vg08.met.vgwort.de/na/39863c183c614df7b46ddc8a5aff58d8" width="1" height="1" alt="">
